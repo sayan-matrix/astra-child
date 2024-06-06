@@ -113,6 +113,10 @@ function show_pincode_form_cart() {
 }
 add_action('woocommerce_before_cart_totals', 'show_pincode_form_cart', 10);
 
+add_action('after_setup_theme', function() {
+	get_template_part('inc/classes/Updater');
+});
+
 
 
 // add_filter( 'request', function( $vars ) {
